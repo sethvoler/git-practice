@@ -1,6 +1,8 @@
 module.exports = {
   settings: {
-    react: 'detect',
+    react: {
+      version: 'detect'
+    },
   },
   env: {
     browser: true,
@@ -28,8 +30,8 @@ module.exports = {
     'no-func-assign': 2, //禁止重复的函数声明
     'no-trailing-spaces': 1, //一行结束后面不要有空格
     'no-undef': 2, //不能有未定义的变量
-    quotes: [1, 'single'], //引号类型 `` "" ''
-    semi: [2, 'always'], //语句强制分号结尾
+    'quotes': [1, 'single'], //引号类型 `` "" ''
+    'semi': [2, 'always'], //语句强制分号结尾
     'no-unused-vars': 2, // 定义未使用
   },
 };
