@@ -16,6 +16,8 @@
     "react-router-config": "^5.1.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
@@ -31,18 +33,19 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "prettier --write",
-      "eslint --fix",
+      "eslint --cache --fix",
       "git add"
     ],
     "src/**/*.{js,jsx}": [
       "prettier --write",
-      "eslint --fix",
+      "eslint --cache --fix",
       "git add"
     ]
   }
