@@ -33,5 +33,6 @@ module.exports = {
     'quotes': [1, 'single'], //引号类型 `` "" ''
     'semi': [2, 'always'], //语句强制分号结尾
     'no-unused-vars': 2, // 定义未使用
+    'react/prop-types': 0
   },
 };

@@ -4,7 +4,9 @@
     "dev": "vite --config ./scripts/vite.config.ts",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "update:gitignore": "node ./scripts/updata.gitignore",
+    "u1": "npm run update:gitignore"
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
@@ -38,10 +40,12 @@
     "eslint-config-alloy": "^4.1.0",
     "eslint-plugin-react": "^7.24.0",
     "husky": "^4.3.8",
+    "inquirer": "^8.1.1",
     "jest": "^27.0.5",
     "lint-staged": "^11.0.0",
     "path": "^0.12.7",
     "prettier": "^2.3.1",
+    "shelljs": "^0.8.4",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.2",
     "vite": "^2.3.8"
