@@ -1,13 +1,13 @@
 {
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --config ./scripts/vite.config.ts",
+    "dev": "vite --config ./scripts/vite/vite.config.ts",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "jest",
-    "update:gitignore": "node ./scripts/updata.gitignore",
+    "update:gitignore": "node ./scripts/git/updata.gitignore",
     "u1": "npm run update:gitignore",
-    "gc": "node ./scripts/git"
+    "gc": "node ./scripts/git/git"
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
