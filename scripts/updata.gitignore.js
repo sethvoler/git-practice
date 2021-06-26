@@ -28,6 +28,6 @@ inquirer.prompt([
     }
   });
   exec('git add .');
-  exec('git commit - m "docs: update .gitignore"');
+  exec('git commit -m "docs: update .gitignore"');
 });
 
