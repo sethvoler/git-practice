@@ -6,7 +6,8 @@
     "serve": "vite preview",
     "test": "jest",
     "update:gitignore": "node ./scripts/updata.gitignore",
-    "u1": "npm run update:gitignore"
+    "u1": "npm run update:gitignore",
+    "gc": "node ./scripts/git"
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
