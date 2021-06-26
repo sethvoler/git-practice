@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button 组件 Button 组件 正确渲染 1`] = `
+<button>
+  按钮
+</button>
+`;
