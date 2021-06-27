@@ -1,9 +1,15 @@
-## 0.0.1 (2021-06-27)
+## [0.0.3](/compare/d4986e66bb62f9938f7bf0820032b25c3f331ba3...v0.0.3) (2021-06-27)
+
+
+### Bug Fixes
+
+* update version post sh 1a51f95
 
 
 ### Features
 
 * add AUTHORS befe001
+* add change version script bf82c58
 * add changelog 5a09c49
 * add commitlint d4986e6
 * add editorconfig 29ab69e
