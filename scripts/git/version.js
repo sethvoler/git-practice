@@ -25,7 +25,7 @@ const gitVersion = async () => {
     ])
   ).version.split(' ')[0];
   exec(`npm version ${version} -m "build: upgrade to %s for reasons"`);
-  // exec(`npm run changelog && git add CHANGELOG.md`);
-  // exec(`git commit -m "docs: changelog"`);
+  exec(`npm run changelog && git add CHANGELOG.md`);
+  exec(`git commit -m "docs: changelog"`);
 };
 gitVersion();
