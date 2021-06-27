@@ -1,10 +1,9 @@
+/* eslint-disable */
 const shell = require('shelljs');
 const inquirer = require('inquirer');
-
 const { exec } = shell;
 
 exec('git add .');
-
 const headers = [
   'feat: 新增功能',
   'fix:  修复缺陷',
@@ -17,28 +16,30 @@ const headers = [
   'revert: 回退版本',
   'style: 样式修改',
   'test: 测试用例修改',
-  'merge: 分支合并'
+  'merge: 分支合并',
 ];
-
 const gitCommit = async () => {
-  const header = (await inquirer.prompt([
-    {
-      type: 'list',
-      name: 'header',
-      message: '请选择 commit header',
-      choices: headers,
-      default: 'feat: 新增功能',
-    }
-  ])).header.split(' ')[0];
-  const desc = (await inquirer.prompt([
-    {
-      type: 'input',
-      name: 'desc',
-      message: '请输入 commit',
-      default: '',
-    }
-  ])).desc.trim();
+  const header = (
+    await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'header',
+        message: '请选择 commit header',
+        choices: headers,
+        default: 'feat: 新增功能',
+      },
+    ])
+  ).header.split(' ')[0];
+  const desc = (
+    await inquirer.prompt([
+      {
+        type: 'input',
+        name: 'desc',
+        message: '请输入 commit',
+        default: '',
+      },
+    ])
+  ).desc.trim();
   exec(`git commit -m "${header} ${desc}"`);
 };
-
 gitCommit();

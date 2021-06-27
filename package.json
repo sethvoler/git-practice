@@ -1,16 +1,17 @@
 {
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "scripts": {
-    "dev": "vite --config ./scripts/vite/vite.config.ts",
+    "dev": "vite -m development -c ./scripts/vite/vite.config.ts",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "jest",
     "update:gitignore": "node ./scripts/git/updata.gitignore",
     "u1": "npm run update:gitignore",
-    "gc": "node ./scripts/git/git"
+    "gc": "node ./scripts/git/git",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "version": "npm run changelog && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@loadable/component": "^5.15.0",
     "classnames": "^2.3.1",
     "mobx-persist": "^0.4.1",
     "mobx-react": "^7.2.0",
@@ -27,13 +28,19 @@
     "@babel/preset-typescript": "^7.14.5",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@loadable/component": "^5.15.0",
+    "@types/loadable__component": "^5.13.3",
     "@types/node": "^15.12.4",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router-config": "^5.0.2",
+    "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
     "@vitejs/plugin-react-refresh": "^1.3.1",
     "babel-jest": "^27.0.5",
+    "conventional-changelog-cli": "^2.1.1",
+    "dotenv": "^10.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
@@ -43,9 +50,12 @@
     "husky": "^4.3.8",
     "inquirer": "^8.1.1",
     "jest": "^27.0.5",
+    "less": "^4.1.1",
     "lint-staged": "^11.0.0",
     "path": "^0.12.7",
+    "postcss": "^8.3.5",
     "prettier": "^2.3.1",
+    "react-router-dom": "^5.2.0",
     "shelljs": "^0.8.4",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.2",
@@ -64,6 +74,26 @@
       "git add"
     ],
     "src/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ],
+    "scripts/**/*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ],
+    "scripts/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ],
+    "__test__/**/*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ],
+    "__test__/**/*.{js,jsx}": [
       "prettier --write",
       "eslint --cache --fix",
       "git add"

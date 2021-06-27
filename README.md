@@ -13,9 +13,19 @@
 
 - `npm run u1`
 - 为了让命令简单将语义化的命令重命名了
-- 具体脚本参考 `scripts/update.gitignore.js`
+- 具体脚本参考 `scripts/git/update.gitignore.js`
 
 ## 快捷 git 提交命令
 
 - `npm run gc`
-- 具体脚本参考 `scripts/git.js`
+- 具体脚本参考 `scripts/git/git.js`
+- 也可以用第三方的 `commitizen` 处理，本项目使用自定义脚本
+
+## 拉取代码后的操作
+
+- 安装 `EditorConfig for VS Code` 插件
+
+## todo
+
+- `vite` 配置优化
+- `mobx store` 组织

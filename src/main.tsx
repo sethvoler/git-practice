@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import App from './App';
-import age from '@/mock';
-
-console.log('age', age);
-
-console.log(import.meta.env.TEST_ENV);
+import { renderRoutes } from 'react-router-config';
+import routes from './routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>{renderRoutes(routes)}</BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
